@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
 
 const AngryButton = () => {
-  return(
-    <div>
-      <button className="AngryButton">
-        <span>Don't click me too much!</span>
-        <span>Rawr!</span>
-      </button>
-    </div>
-  )
-}
+  const [anger, setAnger] = useState();
+
+  return (
+    <button
+      style={{ backgroundColor: `rgba(255,0,0,${anger})` }}
+      className="AngryButton"
+    >
+      {anger < 1 && <span>Don't click me too much! </span>}
+      {anger > 1 && <span>Rawr!</span>}
+    </button>
+  );
+};
 
 export default AngryButton;

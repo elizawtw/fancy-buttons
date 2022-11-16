@@ -1,12 +1,14 @@
 import React from "react";
+import {useState} from 'react';
 
 const CounterButton = () => {
+  const [clickAmount, setClickAmount] = useState();
   return(
-    <div>
+    
       <button className="CounterButton">
-        You clicked me x amount of times
+        You clicked me {clickAmount} times
       </button>
-    </div>
+  
   )
 }
 export default CounterButton;
