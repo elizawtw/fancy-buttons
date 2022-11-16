@@ -2,7 +2,7 @@ import React from "react";
 import {useState} from "react";
 
 const LightSwitchButton = (props) => {
-  const [light, setLight] = useState('off');
+  const {light, setLight} = props;
 
   const onSwitchClick = () => setLight(light === 'off' ? 'on' : 'off');
 
